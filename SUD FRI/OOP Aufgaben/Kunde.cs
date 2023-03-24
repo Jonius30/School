@@ -61,6 +61,8 @@
         // Der zweite Konstruktor wird benötigt um dem Kunden direkt bei erstellen ein bereits existierendes Konto zuzuweisen
         public Kunde(string name, string adresse, Konto konto)
         {
+            Name = name;
+            Adresse = adresse;
             KundenKonto = konto;
         }
     }
