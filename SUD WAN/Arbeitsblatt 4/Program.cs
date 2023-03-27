@@ -1,4 +1,9 @@
-﻿AufgabeSechs();
+﻿AufgabeEins();
+AufgabeZwei();
+AufgabeDrei();
+AufgabeVier();
+AufgabeFuenf();
+AufgabeSechs();
 
 void AufgabeEins()
 {
@@ -35,15 +40,17 @@ void AufgabeZwei()
 
     // Nach der Sortierung ist die kleinste Zahl an der ersten Stelle 
     // Die größte Zahl ist an der letzten Stelle, Bedeutet die Gesamtanzahl von Elementen - 1, da ab 0 gezählt wird
-    Console.Write("Kleinste Zahl: " + zahlen[0]);
-    Console.WriteLine("Größte Zahl" + zahlen[zahlen.Length - 1]);
+    Console.WriteLine("Kleinste Zahl: " + zahlen[0]);
+    Console.WriteLine("Größte Zahl: " + zahlen[zahlen.Length - 1]);
 
     Console.WriteLine();
 }
 
 void AufgabeDrei()
 {
-    int tag = IntAusKonsole("Bitte Tag als eingeben", "Ungültig, bitte eine Zahl eingeben");
+    Console.WriteLine("Aufgabe 3");
+
+    int tag = IntAusKonsole("Bitte Tag als Zahl eingeben", "Ungültig, bitte eine Zahl eingeben");
     int monat = IntAusKonsole("Bitte Monat als Zahl eingeben", "Ungültig, bitte eine Zahl eingeben");
     int jahr = IntAusKonsole("Bitte das Jahr eingeben", "Ungültig, bitte eine Zahl eingeben");
 
@@ -126,6 +133,7 @@ void AufgabeDrei()
 
 void AufgabeVier()
 {
+    Console.WriteLine("Aufgabe 4");
     // new Random().Next generiert zufällige eine Zahl, in den Klammern wird der Bereich angegeben 
     // Zu beachten ist. Der kleinst Wert ist gleich dem Wert in der Klammer. Der größte Wert ist kleiner als der Wert in der Klammer
     // Bedeutet hier werte von 1-100
@@ -150,6 +158,7 @@ void AufgabeVier()
 
 void AufgabeFuenf()
 {
+    Console.WriteLine("Aufgabe 5");
     int zahl = IntAusKonsole("Bitte Zahl eingeben", "Ungültig");
 
     // Der Operator << verschiebt die Bits nach links hier 1 mal nach link (Bedeutet zahl wir x2 gerechnet)
@@ -160,10 +169,12 @@ void AufgabeFuenf()
 
     // 2^5 = 32
     Console.WriteLine($"{zahl} * 32 = {zahl << 5}");
+    Console.WriteLine();
 }
 
 void AufgabeSechs()
 {
+    Console.WriteLine("Aufgabe 6");
     // Variablen
     string passwort = "ZAAHL";
     // string.ToUpper macht alle Buchstaben zu Großbuchstaben
@@ -199,6 +210,7 @@ void AufgabeSechs()
     {
         Console.WriteLine("Login abgebrochen");
     }
+    Console.WriteLine();
 }
 
 bool CheckPasswort(List<char> eingebeneZeichen, char[] passwortZeichen)
